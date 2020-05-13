@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>PWA Calc</title>
+        <meta name="description" content="Test Super Cool PWA">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#2196f3">
+        <link rel="icon" type="image/png" href="./images/icons/icon-128x128.png" />
+        <link rel="apple-touch-icon" href="./images/icons/icon-192x192.png">
+        <meta name="apple-mobile-web-app-status-bar" content="#2196f3">
+        <link rel="stylesheet" href="style.css">
+        <link rel="manifest" href="./manifest.json">
+
+    </head>
+    <body>
+        
+        <div class="calculator">
+            
+            <div class="header">
+                <p>Возраст<input id="a" type="text" placeholder="Возраст: 0,00" class="age" ></p>
+                <p>Вес<input id="b" type="text" placeholder="Вес: 0,00" class="weight" ></p>
+                <p>Рост<input id="c" type="text" placeholder="Рост: 0,00" class="height" ></p>
+            </div>
+
+            <div class="main">
+                <input type="button" value="РЕЗУЛЬТАТ ПО ФОРМУЛЕ МАФФИНА-ДЖЕОРА" onClick="formula1();" class="btn">
+                <input type="button" value="РЕЗУЛЬТАТ ПО ФОРМУЛЕ ХАРРИСА-БЕНЕДИКТА" onClick="formula2();" class="btn">
+            </div>
+
+            <div class="res" id="resl"></div>
+
+        </div>
+
+        <script src="./js/app.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
