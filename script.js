@@ -8,36 +8,53 @@ function formula1() {
     var b = parseInt(document.getElementById('b').value);
     var c = parseInt(document.getElementById('c').value);
 
-    if (isNaN(a)==true) a=0;
-    if (isNaN(b)==true) b=0;
-    if (isNaN(c)==true) c=0;
-
     var d = 10 * parseFloat(b) + 6.25 * parseFloat(c) - 5 * parseFloat(a) + 5;
     var f = b / ((c / 100) * (c / 100));
 
-    document.getElementById('resl').innerHTML = "Количество калорий: " + f + "; Индекс массы тела: " + d
+    if (isNaN(a) || isNaN(b) || isNaN(c)) 
+    {
+        alert( "Введите данные в поля." );
+        document.getElementById("resl").innerHTML = "";
+    }
+    else if (a < 10 || a > 100)
+    {
+        alert ("Возраст не может быть меньше 10 или боольше 100 для точного результата");
+        document.getElementById("resl").innerHTML = "";
+    }
+    else if (b < 20 || b > 300)
+    {
+        alert ("Вес не может быть меньше 20 или боольше 300 для точного результата");
+        document.getElementById("resl").innerHTML = "";
+    }
+    else if (c < 50 || c > 250)
+    {
+        alert ("Рост не может быть меньше 50 или боольше 250 для точного результата");
+        document.getElementById("resl").innerHTML = "";
+    }
+    else 
+    {
+        document.getElementById("resl").innerHTML = "";
+        document.getElementById('resl').innerHTML = "Количество калорий: " + f + "; Индекс массы тела: " + d
+    }
 
     if (f <= 16)
     alert ("Данное значение ИМТ соответствует: Выраженному дефициту массы тела");
-    if (f > 16 && f < 18.5)
+    else if (f > 16 && f < 18.5)
     alert ("Данное значение ИМТ соответствует: Недостаточной массе тела");
-    if (f >= 18.5 && f < 25)
+    else if (f >= 18.5 && f < 25)
     alert ( "Данное значение ИМТ соответствует: Нормальной массе тела");
-    if (f >= 25 && f < 30)
+    else if (f >= 25 && f < 30)
     alert ( "Данное значение ИМТ соответствует: Избыточной массе тела (предожирение)");
-    if (f >= 30 && f < 35)
+    else if (f >= 30 && f < 35)
     alert ( "Данное значение ИМТ соответствует: Ожирению 1-ой степени");
-    if (f >= 35 && f < 40)
+    else if (f >= 35 && f < 40)
     alert ( "Данное значение ИМТ соответствует: Ожирению 2-ой степени");
-    if (f > 40)
+    else if (f > 40)
     alert ( "Данное значение ИМТ соответствует: Ожирению 3-ой степени");
 
-    /*var ele = document.getElementsByName('r1');
-    for(i = 0; i < ele.length; i++) 
-    {
-        if(ele[i].checked)
-        document.getElementById("resl").innerHTML= "Результат: "+ele[i].value;
-    }*/
+    var d = 10 * parseFloat(b) + 6.25 * parseFloat(c) - 5 * parseFloat(a) + 5;
+    var f = b / ((c / 100) * (c / 100));
+    
 }
 
 function formula2() {
@@ -45,28 +62,50 @@ function formula2() {
     var b = parseInt(document.getElementById('b').value);
     var c = parseInt(document.getElementById('c').value);
 
-    if (isNaN(a)==true) a=0;
-    if (isNaN(b)==true) b=0;
-    if (isNaN(c)==true) c=0;
-
-    var d = 66.5+(13.75*b)+(5.003*c) - (6.775 * a);
+    var d = 10 * parseFloat(b) + 6.25 * parseFloat(c) - 5 * parseFloat(a) + 5;
     var f = b / ((c / 100) * (c / 100));
 
-
-    document.getElementById('resl').innerHTML = "Количество калорий: " + f + "; Индекс массы тела: " + d
+    if (isNaN(a) || isNaN(b) || isNaN(c)) 
+    {
+        alert( "Введите данные в поля." );
+        document.getElementById("resl").innerHTML = "";
+    }
+    else if (a < 10 || a > 100)
+    {
+        alert ("Возраст не может быть меньше 10 или боольше 100 для точного результата");
+        document.getElementById("resl").innerHTML = "";
+    }
+    else if (b < 20 || b > 300)
+    {
+        alert ("Вес не может быть меньше 20 или боольше 300 для точного результата");
+        document.getElementById("resl").innerHTML = "";
+    }
+    else if (c < 50 || c > 250)
+    {
+        alert ("Рост не может быть меньше 50 или боольше 250 для точного результата");
+        document.getElementById("resl").innerHTML = "";
+    }
+    else 
+    {
+        document.getElementById("resl").innerHTML = "";
+        document.getElementById('resl').innerHTML = "Количество калорий: " + f + "; Индекс массы тела: " + d
+    }
 
     if (f <= 16)
     alert ("Данное значение ИМТ соответствует: Выраженному дефициту массы тела");
-    if (f > 16 && f < 18.5)
+    else if (f > 16 && f < 18.5)
     alert ("Данное значение ИМТ соответствует: Недостаточной массе тела");
-    if (f >= 18.5 && f < 25)
+    else if (f >= 18.5 && f < 25)
     alert ( "Данное значение ИМТ соответствует: Нормальной массе тела");
-    if (f >= 25 && f < 30)
+    else if (f >= 25 && f < 30)
     alert ( "Данное значение ИМТ соответствует: Избыточной массе тела (предожирение)");
-    if (f >= 30 && f < 35)
+    else if (f >= 30 && f < 35)
     alert ( "Данное значение ИМТ соответствует: Ожирению 1-ой степени");
-    if (f >= 35 && f < 40)
+    else if (f >= 35 && f < 40)
     alert ( "Данное значение ИМТ соответствует: Ожирению 2-ой степени");
-    if (f > 40)
+    else if (f > 40)
     alert ( "Данное значение ИМТ соответствует: Ожирению 3-ой степени");
+
+    var d = 66.5+(13.75*b)+(5.003*c) - (6.775 * a);
+    var f = b / ((c / 100) * (c / 100));
 }
